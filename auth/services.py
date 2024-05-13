@@ -95,5 +95,5 @@ async def verify_token(token, db):
             detail="Invalid token",
             headers={'WWW-Authenticate': 'Bearer'}
         )
-        
+
     return True
