@@ -10,13 +10,13 @@ from core.security import oauth2_scheme, get_current_user
 router = APIRouter(
     prefix="/users",
     tags=["User"],
-    responses={404: {'descripion': 'Not found'}},
+    responses={404: {'description': 'Not found'}},
 )
 
 private_router = APIRouter(
     prefix="/users",
     tags=["User"],
-    responses={404: {'descripion': 'Not found'}},
+    responses={404: {'description': 'Not found'}},
     dependencies=[Depends(oauth2_scheme)]
 )
 
